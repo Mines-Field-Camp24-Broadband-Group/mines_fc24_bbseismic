@@ -15,8 +15,8 @@ from obspy.clients.fdsn.mass_downloader import RectangularDomain, \
 
 def getData(start,outfile,day_index):    
     # Rectangular domain 
-    domain = RectangularDomain(minlatitude=39.76, maxlatitude=40.20,
-                               minlongitude=-105.00, maxlongitude=-104.12)
+    domain = RectangularDomain(minlatitude=34.00, maxlatitude=36.58,
+                               minlongitude=-100.00, maxlongitude=-94.28)
     
     restrictions = Restrictions(
         # Get data for a range of dates.
@@ -51,7 +51,7 @@ def getData(start,outfile,day_index):
     # Restrict the number of providers if you know which serve the desired
     # data. If in doubt just don't specify - then all providers will be
     # queried.
-    mdl = MassDownloader(providers=["IRIS","NEIC"])
+    mdl = MassDownloader(providers=["IRIS"])
     write_tf=os.path.join(outfile,'waveforms'+'{:s}'.format(day_index))
     write_ts=os.path.join(write_tf,'stations'+'{:s}'.format(day_index))
     mdl.download(domain, restrictions, mseed_storage=write_tf,
@@ -67,7 +67,7 @@ def datenum(d):
 #d = dt.strptime(d_str,'%Y-%m-%d')
 #dn = datenum(d)
 
-out=os.path.join('/Users/echon/Desktop/python_scripts/neic_internship','data3')
+out=os.path.join('../data/','oklahoma_eqs_5-30')
 
     
 for n in range(1,91):
@@ -76,5 +76,5 @@ for n in range(1,91):
     dayMult=i*86400
     #day=dt.strptime('2018-11-01','%Y-%m-%d')
     #day=datenum(day)+dayMult
-    day=obspy.UTCDateTime(2015,4,26)+dayMult
+    day=obspy.UTCDateTime(2024,5,29)+dayMult
     getData(day,out,ii)

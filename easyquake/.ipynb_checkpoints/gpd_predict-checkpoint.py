@@ -30,11 +30,11 @@ mpl.rcParams['pdf.fonttype'] = 42
 
 #####################
 # Hyperparameters
-min_proba = 0.95 # Minimum softmax probability for phase detection
-freq_min = 0.01
-freq_max = 1.0
+min_proba = 0.99 # Minimum softmax probability for phase detection
+freq_min = 3.0
+freq_max = 20.0
 filter_data = True
-decimate_data = False # If false, assumes data is already 100 Hz samprate
+decimate_data = True # If false, assumes data is already 100 Hz samprate
 n_shift = 10 # Number of samples to shift the sliding window at a time
 n_gpu = 1 # Number of GPUs to use (if any)
 #####################
