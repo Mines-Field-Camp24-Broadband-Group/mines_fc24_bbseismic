@@ -1,6 +1,6 @@
 # Oklahoma Microseismic Data
 
-The files in this folder contain traces from broadband sesismometers in Oklahoma (an area of known seismicity) over the course of May 29 through May 30, 2024. Data was pulled from 4 broadband stations, their locations are as follows acording to IRIS:
+The files in this folder contain traces from broadband sesismometers in Oklahoma (an area of known seismicity) over the course of May 29 through May 30, 2024. Data was pulled from 4 broadband stations, their locations are as follows acording to IRIS (https://ds.iris.edu/gmap/#network=O2&station=ARC2&planet=earth):
 
 *2V.TG11*
 - 35.2689 N, -97.8146 W
