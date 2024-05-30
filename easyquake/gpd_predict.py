@@ -30,7 +30,7 @@ mpl.rcParams['pdf.fonttype'] = 42
 
 #####################
 # Hyperparameters
-min_proba = 0.95 # Minimum softmax probability for phase detection
+min_proba = 0.99 # Minimum softmax probability for phase detection
 freq_min = 3.0
 freq_max = 20.0
 filter_data = True
