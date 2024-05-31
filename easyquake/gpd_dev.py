@@ -30,7 +30,7 @@ mpl.rcParams['pdf.fonttype'] = 42
 
 #####################
 # Hyperparameters
-min_proba = 0.95 # Minimum softmax probability for phase detection
+min_proba = 0.995 # Minimum softmax probability for phase detection
 freq_min = 3.0
 freq_max = 20.0
 filter_data = True
@@ -173,8 +173,8 @@ if __name__ == "__main__":
 
     ofile = open(args.O, 'w')
 
-    for i in range(nsta):
-        fname = fdir[i][0].split("/")
+    for i in range(nsta): # iterate through miniseed files in input text file
+        fname = fdir[i][0].split("/") # split by line in input file
         if not os.path.isfile(fdir[i][0]):
             print("%s doesn't exist, skipping" % fdir[i][0])
             continue
@@ -188,8 +188,18 @@ if __name__ == "__main__":
         st += oc.read(fdir[i][0])
         st += oc.read(fdir[i][1])
         st += oc.read(fdir[i][2])
-        latest_start = np.max([x.stats.starttime for x in st])
-        earliest_stop = np.min([x.stats.endtime for x in st])
+        latest_start = np.min([x.stats.starttime for x in st]) ### Changed from max to min
+        earliest_stop = np.min([x.stats.endtime for x in st]) 
+        if args.V:
+            print('*'*35)
+            print(f'start time: {latest_start}')
+            print(f'stop time:  {earliest_stop}')
+            print('-'*20)
+            print(f'stream: {st}')
+            print('*'*35)
+        if latest_start > earliest_stop:
+            print("%s: startime is larger than endtime, skipping" % st[0].stats.station)
+            continue
         st.trim(latest_start, earliest_stop)
 
         st.detrend(type='linear')
