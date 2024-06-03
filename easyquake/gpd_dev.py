@@ -30,10 +30,10 @@ mpl.rcParams['pdf.fonttype'] = 42
 
 #####################
 # Hyperparameters
-min_proba = 0.995 # Minimum softmax probability for phase detection
-freq_min = 3.0
-freq_max = 20.0
-filter_data = True
+min_proba = 0.95 # Minimum softmax probability for phase detection
+freq_min = 0.0
+freq_max = 50.0
+filter_data = False
 decimate_data = True # If false, assumes data is already 100 Hz samprate
 n_shift = 10 # Number of samples to shift the sliding window at a time
 n_gpu = 1 # Number of GPUs to use (if any)
@@ -280,10 +280,21 @@ if __name__ == "__main__":
             ax.append(fig.add_subplot(4,1,3,sharex=ax[0],sharey=ax[0]))
             ax.append(fig.add_subplot(4,1,4,sharex=ax[0]))
             for i in range(3):
+                if i==0:
+                    label = 'x-component'
+                elif i==1:
+                    label = 'y-component'
+                elif i==2:
+                    label = 'z-component'
                 ax[i].plot(np.arange(st[i].data.size)*dt, st[i].data, c='k', \
-                           lw=0.5)
-            ax[3].plot(tt, ts[:,0], c='r', lw=0.5)
-            ax[3].plot(tt, ts[:,1], c='b', lw=0.5)
+                           lw=0.5,label=label)
+                ax[i].legend()
+            ax[3].plot(tt, ts[:,0], c='r', lw=0.5,label='P-wave Probability')
+            ax[3].plot(tt, ts[:,1], c='b', lw=0.5,label='S-wave Probability')
+            ax[3].legend()
+            ax[3].title('Probability Plot')
+            ax[3].set_ylabel('Probability')
+            ax[3].set_xlabel('Time')
             for p_pick in p_picks:
                 for i in range(3):
                     ax[i].axvline(p_pick-st[0].stats.starttime, c='r', lw=0.5)

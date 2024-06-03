@@ -1,0 +1,57 @@
+C0 SHIP P 2022-05-20T01:44:41.105000 ***Some signal, probably not earthquake - does not correspond with hayden
+C0 SHIP P 2022-05-20T01:44:53.605000
+*** Hand picked arrival around 12:18:30, signal in Hayden around 21:19:10
+------------------------------------
+*** C0 SHIP S 2022-05-20T06:55:15.805000 ***Might be something around 06:58:00, large signal at hayden at 06:52:30 (~5s P-S time)
+C0 SHIP S 2022-05-20T07:30:58.905000 ***Might be something around 07:32:30
+====================================
+====================================
+*** C0 SHIP P 2022-05-21T04:54:04.505000 ***Might be something, similar signal in Hayden at 04:54:50
+C0 SHIP P 2022-05-21T07:32:10.705000 ***Maybe an actual arrival
+C0 SHIP P 2022-05-21T07:32:51.405000 ***Maybe an actual arrival - no clear correspondance with hayden station
+C0 SHIP P 2022-05-21T07:33:03.005000
+C0 SHIP P 2022-05-21T07:33:09.405000
+C0 SHIP P 2022-05-21T07:33:26.505000
+C0 SHIP P 2022-05-21T21:21:31.105000 ***Maybe something here, no correspondance with hayden
+------------------------------------
+C0 SHIP S 2022-05-21T04:56:57.905000 ***Corresponds to P arrival at 04:54:04
+C0 SHIP S 2022-05-21T05:02:04.405000 ***Something closer to 05:03
+C0 SHIP S 2022-05-21T05:15:40.405000 ***Maybe closer to 05:15:00
+C0 SHIP S 2022-05-21T06:06:07.905000 ***Possibly an actual arrival, no correspondance with hayden
+C0 SHIP S 2022-05-21T06:10:51.405000 ***Maybe, no correspondance with hayden
+C0 SHIP S 2022-05-21T07:10:34.605000 ***Something around 07:10:00, no correspondance with hayden
+C0 SHIP S 2022-05-21T07:32:39.205000 ***Maybe an actual arrival
+*** C0 SHIP S 2022-05-21T07:33:12.905000 ***Maybe an actual arrival - possible correspondance with hayden station
+C0 SHIP S 2022-05-21T07:33:19.905000
+C0 SHIP S 2022-05-21T07:33:29.905000
+====================================
+====================================
+C0 SHIP P 2022-05-23T05:47:21.005000 ***No correspondance with hayden
+C0 SHIP P 2022-05-23T06:03:38.405000 ***No correspondance with hayden
+C0 SHIP P 2022-05-23T15:37:50.105000 ***Maybe, no correspondance with hayden
+------------------------------------
+C0 SHIP S 2022-05-23T05:48:20.905000 ***Maybe
+C0 SHIP S 2022-05-23T06:10:30.805000 ***No correspondance with hayden
+C0 SHIP S 2022-05-23T06:17:40.705000 ***No correspondance with hayden
+C0 SHIP S 2022-05-23T06:27:36.105000 ***Maybe around 06:24:30
+====================================
+====================================
+*** C0 SHIP P 2022-05-24T22:34:56.205000 ***something worth looking into, correspnds to signal at hayden at 22:31:30
+------------------------------------
+C0 SHIP S 2022-05-24T22:36:26.705000
+====================================
+====================================
+C0 SHIP P 2022-05-25T02:10:15.705000 ***Possibly, no correspondance with hayden
+C0 SHIP P 2022-05-25T21:19:04.205000 ***Maybe, no correspondance with hayden
+====================================
+====================================
+C0 SHIP P 2022-05-26T12:12:14.000000 ***Hand-Picked-Peru-EQ***
+C0 SHIP P 2022-05-26T12:20:53.305000
+C0 SHIP P 2022-05-26T12:26:44.205000
+------------------------------------
+C0 SHIP S 2022-05-26T12:12:37.205000 ***Peru EQ
+C0 SHIP S 2022-05-26T12:25:48.105000
+C0 SHIP S 2022-05-26T12:35:34.205000
+C0 SHIP S 2022-05-26T12:38:27.605000
+C0 SHIP S 2022-05-26T12:38:47.005000
+C0 SHIP S 2022-05-26T13:27:16.405000 ***Maybe one around 13:27:30
