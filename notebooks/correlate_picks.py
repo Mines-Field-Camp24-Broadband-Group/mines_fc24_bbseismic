@@ -23,7 +23,7 @@ def find_matching_values(df1, df2, tolerance_seconds=3):
             (df2['time'] <= time + timedelta(seconds=tolerance_seconds))
         ]
         for _, matching_row in matching_rows.iterrows():
-            matching_values.append((row, matching_row))
+            matching_values.append((matching_row['time']))
     return matching_values
 
 def main(file_1, file_2,output_file):
